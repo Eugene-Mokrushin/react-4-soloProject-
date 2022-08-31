@@ -34,6 +34,10 @@ body {
     height: 100vh;
 
     .start {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
 
 
         .title {
@@ -92,10 +96,16 @@ body {
     }
 
     main {
+        user-select: none;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        max-width: 800px;
+        min-width: 800px;
+        .q-wrapper {
+            width: 100%;
+        }
 
         .question--block {
             border-bottom: 0.794239px solid #DBDEF0;
@@ -112,6 +122,7 @@ body {
 
             .wrapper--answers {
                 display: flex;
+                flex-wrap: wrap;
                 margin-top: 12px;
                 margin-bottom: 15px;
 
@@ -122,8 +133,9 @@ body {
                 .label--answer {
                     white-space: nowrap;
                     padding: 4px 16px;
-                    border: 0.794239px solid #4D5B9E;
+                    outline: 0.794239px solid #4D5B9E;
                     border-radius: 7.94239px;
+    
 
                     margin-right: 13px;
 
@@ -138,23 +150,27 @@ body {
                     color: #293264;
                 }
 
-                .active {
-                    border: none;
+                .wrpapper-wrapper {
+                    margin-top: 10px;
+                }
+
+                .selected {
+                    outline: 0.794239px solid transparent;
                     background: #D6DBF5;
                     color: #293264;
                 }
 
-                .correct {
-                    background: #94D7A2;
+                #correct {
+                    background: #94D7A2 !important;
                 }
 
-                .incorrect {
+                #incorrect {
                     background: #F8BCBC;
                 }
 
-                .notSelected {
+                #notSelected {
                     opacity: 0.5;
-                    border: 0.794239px solid #4D5B9E;
+                    outline: 0.794239px solid #4D5B9E;
                 }
             }
         }
